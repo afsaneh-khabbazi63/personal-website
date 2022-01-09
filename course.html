@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example Homepage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>AFSANEH KHABBAZI BASMENJ</h1>
+        <p>ALGONQUIN COLLEGE</p>
+        </div>
+        <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="course.html">Course</a>
+    <a href="resume.html">Resume</a>
+</div>
+
+<section id="select-courses">
+  <div class="search">
+     <input id="search-input" type="text" placeholder="Search.." onkeyup="searchCourse()" >
+  </div>
+      
+
+  <div class="options">
+    <label for="filter">Filter:</label>
+       <select id="filter" onchange="filterCourse()">
+        <option value="all">all level</option>
+         <option value="level 1">level 1</option>
+         <option value="level 2">level 2</option>
+       </select>
+      <!--creat sort for levels-->
+      <label for="sort">Sort:</label>
+      <select id="sort"  onchange="sortCourse()" >
+        <option value="0">not sorted</option>
+        <option value="1">sort asending</option>
+        <option value="2">sort desending</option>
+      </select>
+
+  </div>
+
+</section>
+
+<!--creat image side by side-->
+<div class="jadval1">
+  <div class="na">
+  <h2>COURSES</h2>
+</div>
+<div class="row">
+
+</div>
+</div>
+
+
+<!--creat footer-->
+<div class="footer">
+    <br>
+    <div class="text">
+    <p>telephone:6132655141</p>
+    <p>gmail:afsahen.khabbazibasmenj@gmail</p>
+    </div>
+    <br>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
