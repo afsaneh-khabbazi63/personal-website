@@ -1,16 +1,16 @@
 //Array of Courses lists level1 and level2
 var courses=[
-    {id:1,title:"introduction to programming",image:"images/course/javay.jpg",alt:"java",courseId:"21S_CST8116",description:"start at spring 2021 finish at Agust 2021",level:"level 1"},
-    {id:2,title:"Computer Essential",image:"images/course/javad.jpg",alt:"Essential",courseId:"21S_CST8101",description:"start at spring 2021 finish at aqust 2021",level:"level 1"},
-    {id:2,title:"introduction to database",image:"images/course/javase.jpg",alt:"data",courseId:"21S_CST8215",description:"start at spring 2021 finish at aqust 2021",level:"level 1"},
-    {id:3,title:"Tech Math for computer science",image:"images/course/javache.jpg",alt:"math",courseId:"21S_Mat8001C",description:"start at spring 2021 finish at Agust 2021",level:"level 1"},
-    {id:4,title:"comunicatio",image:"images/course/javape.jpg",alt:"comunicat",courseId:"21S_ENL1813T",description:"start at spring 2021 finish at Agust 2021",level:"level 1"},
-    {id:5,title:"Achieving Success in Changing Envirnment",image:"images/course/javashi.jpg",alt:"envir",courseId:"21S_ENL1813T",description:"start at spring 2021 finish at Agust 2021",level:"level 1"},
-    {id:6,title:"Java programming",image:"images/course/htmly.jpg",alt:"eclipse",courseId:"21F_CST8284",description:"start at Fall 2021 finish at December 2021",level:"level 2"},
-    {id:7,title:"web programming",image:"images/course/htd.jpg",alt:"hcj",courseId:"21F_CST8285",description:"start at spring 2021 finish at Agust 2021",level:"level 2"},
-    {id:8,title:"data base systems ",image:"images/course/hts.jpg",alt:"sys",courseId:"21F-CST2355",description:"start at spring 2021 finish at Agust 2021",level:"level 2"},
-    {id:9,title:"Opretating Systems",image:"images/course/htc.jpg",alt:"oper",courseId:"21S_CST8102",description:"start at spring 2021 finish at Agust 2021",level:"level 2"},
-    {id:10,title:"Coorprative Education",image:"images/course/htp.jpg",alt:"coor",courseId:"21S_GEP1001",description:"start at spring 2021 finish at Agust 2021",level:"level 2"},
+    {id:1,title:"introduction to programming",image:"images/courses/javay.jpg",alt:"java",courseId:"21S_CST8116",description:"start at spring 2021 finish at Agust 2021",level:"level 1"},
+    {id:2,title:"Computer Essential",image:"images/courses/javad.jpg",alt:"Essential",courseId:"21S_CST8101",description:"start at spring 2021 finish at aqust 2021",level:"level 1"},
+    {id:2,title:"introduction to database",image:"images/courses/javase.jpg",alt:"data",courseId:"21S_CST8215",description:"start at spring 2021 finish at aqust 2021",level:"level 1"},
+    {id:3,title:"Tech Math for computer science",image:"images/courses/javache.jpg",alt:"math",courseId:"21S_Mat8001C",description:"start at spring 2021 finish at Agust 2021",level:"level 1"},
+    {id:4,title:"comunicatio",image:"images/courses/javape.jpg",alt:"comunicat",courseId:"21S_ENL1813T",description:"start at spring 2021 finish at Agust 2021",level:"level 1"},
+    {id:5,title:"Achieving Success in Changing Envirnment",image:"images/courses/javashi.jpg",alt:"envir",courseId:"21S_ENL1813T",description:"start at spring 2021 finish at Agust 2021",level:"level 1"},
+    {id:6,title:"Java programming",image:"images/courses/htmly.jpg",alt:"eclipse",courseId:"21F_CST8284",description:"start at Fall 2021 finish at December 2021",level:"level 2"},
+    {id:7,title:"web programming",image:"images/courses/htd.jpg",alt:"hcj",courseId:"21F_CST8285",description:"start at spring 2021 finish at Agust 2021",level:"level 2"},
+    {id:8,title:"data base systems ",image:"images/courses/hts.jpg",alt:"sys",courseId:"21F-CST2355",description:"start at spring 2021 finish at Agust 2021",level:"level 2"},
+    {id:9,title:"Opretating Systems",image:"images/courses/htc.jpg",alt:"oper",courseId:"21S_CST8102",description:"start at spring 2021 finish at Agust 2021",level:"level 2"},
+    {id:10,title:"Coorprative Education",image:"images/courses/htp.jpg",alt:"coor",courseId:"21S_GEP1001",description:"start at spring 2021 finish at Agust 2021",level:"level 2"},
 ];
 
 //get '.row' that is  the element for displaying course (holding list of courses's card)
@@ -31,7 +31,7 @@ for (let index = 0; index < arrayOfCourses.length; index++) {
     img.src=arrayOfCourses[index].image;
     img.alt=arrayOfCourses[index].alt;
     
-    let pTitle=document.createElement('p');
+    let pTitle=document.createElement('h4');
     pTitle.innerText=arrayOfCourses[index].title;
 
     let pCourseId=document.createElement('p');
@@ -61,13 +61,13 @@ createCourses(courses);
 function searchCourse() {
 
     //get value of search input
-    let value=document.getElementById('search-input').value;
+    let value=document.getElementById('search-input').value.toLowerCase();
 
     //regular expression for search value
     let regEx=`^.*${value}.*$`;
    
     //filtering the "courses array" base on value regEx (to find any item of courses the course's title is simlare search value)
-   let searchArray= courses.filter( (item) => item.title.match(regEx));
+   let searchArray= courses.filter( (item) => item.title.toLowerCase().match(regEx));
 
    //emptying ".row" element
    row.innerHTML="";

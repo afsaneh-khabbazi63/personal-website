@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Example Homepage</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Course page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
+    <header>
         <h1>AFSANEH KHABBAZI BASMENJ</h1>
         <p>ALGONQUIN COLLEGE</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="course.html">Course</a>
+        <a href="resume.html">Resume</a>
+    </nav>
+    <section id="select-courses">
+        <div class="search">
+            <input id="search-input" type="text" placeholder="Search.." onkeyup="searchCourse()" >
         </div>
-        <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="course.html">Course</a>
-    <a href="resume.html">Resume</a>
-</div>
-
-<section id="select-courses">
-  <div class="search">
-     <input id="search-input" type="text" placeholder="Search.." onkeyup="searchCourse()" >
-  </div>
-      
-
-  <div class="options">
-    <label for="filter">Filter:</label>
-       <select id="filter" onchange="filterCourse()">
-        <option value="all">all level</option>
-         <option value="level 1">level 1</option>
-         <option value="level 2">level 2</option>
-       </select>
-      <!--creat sort for levels-->
-      <label for="sort">Sort:</label>
-      <select id="sort"  onchange="sortCourse()" >
-        <option value="0">not sorted</option>
-        <option value="1">sort asending</option>
-        <option value="2">sort desending</option>
-      </select>
-
-  </div>
-
-</section>
-
-<!--creat image side by side-->
-<div class="jadval1">
-  <div class="na">
-  <h2>COURSES</h2>
-</div>
-<div class="row">
-
-</div>
-</div>
 
 
-<!--creat footer-->
-<div class="footer">
-    <br>
-    <div class="text">
-    <p>telephone:6132655141</p>
-    <p>gmail:afsahen.khabbazibasmenj@gmail</p>
+        <div class="options">
+            <label for="filter">Filter:</label>
+            <select id="filter"  onchange="filterCourse()">
+                <option value="all">all level</option>
+                <option value="level 1">level 1</option>
+                <option value="level 2">level 2</option>
+            </select>
+            <!--creat sort for levels-->
+            <label for="sort">Sort:</label>
+            <select id="sort"  onchange="sortCourse()" >
+                <option value="0">not sorted</option>
+                <option value="1">sort asending</option>
+                <option value="2">sort desending</option>
+            </select>
+
+        </div>
+
+    </section>
+
+    <!--creat image side by side-->
+    <div class="jadval1">
+        <div class="na">
+            <h2>COURSES</h2>
+        </div>
+        <div class="row">
+
+        </div>
     </div>
-    <br>
-  </div>
 
-  <script src="app.js"></script>
+
+    <!--creat footer-->
+    <div class="footer">
+        <ul class="contact-me">
+            <li><b>telephone: </b> 6132655141</li>
+            <li><b>gmail:</b> afsahen.khabbazibasmenj@gmail</li>
+            <li><b>gitHub:</b>
+                <a href="https://github.com/afsaneh-khabbazi63">https://github.com/afsaneh-khabbazi63</a>
+            </li>
+        </ul>
+
+        <div class="copyright">
+            <p> © Copyright 2021-2022, by Afsaneh Khabazi </p>
+            <p>All rights reserved</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
 </body>
 </html>
